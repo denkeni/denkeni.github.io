@@ -7,8 +7,29 @@
     <link rel="apple-touch-icon" type="image/jpg" href="https://pbs.twimg.com/profile_images/595614938472718337/qmzDrkNJ_normal.jpg">
     <title>die Freude am Denken</title>
     <style type="text/css">
+        :root {
+            color-scheme: light dark;
+            --background-color: #FFFFFF;
+            --fa-color: black;
+            --text-color: black;
+            --a-hover-background-color: #E0E0E0;
+            --border-color: lightGray;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background-color: #111111;
+                --fa-color: lightGray;
+                --text-color: lightGray;
+                --a-hover-background-color: #505050;
+                --border-color: gray;
+            }
+        }
         body {
-            background-color: #EEEEEE;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        .fa {
+            color: var(--fa-color);
         }
         div#content {
             width: 100%;
@@ -72,7 +93,7 @@
             display: inline-block;
             text-align: left;
             padding-left: 8pt;
-            border-left: 1px solid lightGray;
+            border-left: 1px solid var(--border-color);
         }
         div.description-right ol,
         ul {
@@ -81,14 +102,14 @@
             padding-left: 0;
         }
         a {
-            color: black;
+            color: var(--text-color);
             text-decoration: none;
         }
         div.description a {
-            border-bottom: 1px dashed black;
+            border-bottom: 1px dashed var(--border-color);
         }
         div.description a:hover {
-            background-color: #E0E0E0;
+            background-color: var(--a-hover-background-color);
         }
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
