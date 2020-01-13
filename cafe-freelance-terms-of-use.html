@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CafeFreelance 工作咖啡館：使用條款</title>
     <style type="text/css">
+      :root {
+          color-scheme: light dark;
+          --background-color: #EEEEEE;
+          --text-color: black;
+      }
+      @media (prefers-color-scheme: dark) {
+          :root {
+              --background-color: #111111;
+              --text-color: lightgray;
+          }
+      }
       body {
-        background-color: #EEEEEE;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+      a {
+        color: var(--text-color);
       }
       div#content h1 {
         text-align: center;
